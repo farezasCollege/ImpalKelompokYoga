@@ -1,4 +1,4 @@
-# ImpalKelompokYoga br/br/
+# ImpalKelompokYoga
 
 Dppl terstruktur: <br/>
 https://drive.google.com/file/d/1SWuuv2dZZzkdhgxy1yiyRJO66jl9FECC/view?usp=drivesdk <br/><br/>
