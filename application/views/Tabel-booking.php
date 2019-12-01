@@ -54,23 +54,17 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Register-pegawai.html">
+        <a class="nav-link" href="<?php echo base_url()index.php/REGISTERPEG ?>">
           <i class="fas fa-fw fa-users"></i>
           <span>Register Pegawai</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="tabel-pegawai.html">
+        <a class="nav-link" href="<?php echo base_url()index.php/DAFTARPEGAWAI ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Pegawai</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="tabel-booking.html">
+        <a class="nav-link" href="<?php echo base_url()index.php/JASAPEMESANANTABEL ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Booking</span></a>
       </li>
@@ -93,23 +87,26 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <!-- Nama, nama_jasa, harga, jam_pelayanan, tanggal_pelayanan -->
+                    <th class="text-center" scope="col">NAME</th>
+                    <th class="text-center" scope="col">SERVICE</th>
+                    <th class="text-center" scope="col">TIME</th>
+                    <th class="text-center" scope="col">DATE</th>
+                    <th class="text-center" scope="col">STATUS BAYAR</th>
+                    <th class="text-center" scope="col">PRICE</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
+                  <tr><?php foreach ($pemesanan as $Pem) : ?>
+                  <td class="text-center"><?= $Pem->Nama; ?></td>
+                  <td class="text-center"><?= $Pem->nama_jasa; ?></td>
+                  <td class="text-center"><?= $Pem->jam_pelayanan; ?></td>
+                  <td class="text-center"><?= $Pem->tanggal_pelayanan; ?></td>
+                  <td class="text-center"><?= $Pem->status_bayar; ?>
+                </td>
+                <td class="text-center"><?= $Pem->harga; ?></td>
                   </tr>
+                <?php endforeach ?>
                 </tbody>
               </table>
             </div>

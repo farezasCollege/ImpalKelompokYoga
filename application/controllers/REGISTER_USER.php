@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class REGISTERPEG extends CI_Controller
+class REGISTER_USER extends CI_Controller
 {
 
     public function __construct()
@@ -14,19 +14,19 @@ class REGISTERPEG extends CI_Controller
 
     public function index()
     {
-        $this->load->view('Register-pegawai');
+        $this->load->view('Signup');
     }
 
     public function Register()
     {
         $data = array(
             'Nama' => $_POST['nama'],
-            'Date' => $_POST['date'],
+            'Date' => $_POST['tgl-lahir'],
             'Email' => $_POST['email'],
             'Username' => $_POST['Username'],
             'Password' => md5($_POST['pass']),
-            'Role' => 'Pegawai'
+            'Role' => 'customer'
         );
-        $this->SALON->InsertPegawai($data);
+        $this->SALON->InsertCustomer($data);
     }
 }

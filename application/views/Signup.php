@@ -52,7 +52,7 @@
 					<div class="form contact-form">
 						<form id="signup-form" method="post" role="form">
 							<div class="form-group">
-								<input type="text" name="username" placeholder="Enter username" required>
+								<input type="text" name="Username" placeholder="Enter username" required>
 							</div>
 							<div class="form-group">
 								<input type="password" id="key" name="pass" placeholder="Enter your password" required>

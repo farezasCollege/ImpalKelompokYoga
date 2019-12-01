@@ -54,23 +54,17 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="Register-pegawai.html">
+        <a class="nav-link" href="<?php echo base_url()index.php/REGISTERPEG ?>">
           <i class="fas fa-fw fa-users"></i>
           <span>Register Pegawai</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="tabel-pegawai.html">
+        <a class="nav-link" href="<?php echo base_url()index.php/DAFTARPEGAWAI ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Pegawai</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tabel-booking.html">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url()index.php/JASAPEMESANANTABEL ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Booking</span></a>
       </li>
@@ -93,13 +87,13 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
+                  <input type="text" name="nama" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
                   <label for="firstName">Nama</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="lastName" class="form-control" placeholder="Last name" required="required">
+                  <input type="text" name="Username" id="username" class="form-control" placeholder="Username" required="required">
                   <label for="lastName">Username</label>
                 </div>
               </div>
@@ -107,13 +101,13 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="date" id="inputTTL" class="form-control" required="required">
+              <input type="date" name="date" id="inputTTL" class="form-control" required="required">
               <label for="inputTTL">Tanggal Lahir</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
+              <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
               <label for="inputEmail">Email address</label>
             </div>
           </div>
@@ -121,7 +115,7 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="password" id="key" class="form-control" placeholder="Password" required="required">
+                  <input type="password" name="pass" id="key" class="form-control" placeholder="Password" required="required">
                   <label for="key">Password</label>
                 </div>
               </div>

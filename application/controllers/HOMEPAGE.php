@@ -11,6 +11,7 @@ class homepage extends CI_Controller
 
 	function index(){
 		$this->load->view('INDEX'); //ganti php duls
+		$this->load->view('Navbar');
 	}
 
 	function login_action(){
@@ -50,7 +51,8 @@ class homepage extends CI_Controller
 
 
 	function homepage_cust(){
-		$this->load->view('HOMEPAGE_CUSTOMER');
+		$this->load->view('INDEX');
+		$this->load->view('Navbar-loggedin');
 	}
 
 

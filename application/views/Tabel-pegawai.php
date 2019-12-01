@@ -54,23 +54,17 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Register-pegawai.html">
+        <a class="nav-link" href="<?php echo base_url()index.php/REGISTERPEG ?>">
           <i class="fas fa-fw fa-users"></i>
           <span>Register Pegawai</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="tabel-pegawai.html">
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url()index.php/DAFTARPEGAWAI ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Pegawai</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tabel-booking.html">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url()index.php/JASAPEMESANANTABEL ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Booking</span></a>
       </li>
@@ -93,22 +87,18 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Nama</th>
+                    <th>Tempat dan Tanggal Lahir</th>
+                    <th>Email address</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
+                    <?php foreach ($Pegawai as $Peg) : ?>
+                    <td class="text-center"><?= $Peg->Nama; ?></td>
+                    <td class="text-center"><?= $Peg->Date; ?></td>
+                    <td class="text-center"><?= $Peg->Email; ?></td>
+                    <?php endforeach ?>
                   </tr>
                 </tbody>
               </table>
@@ -152,7 +142,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="<?php echo base_url()index.php/LOGIN_PEG_CONTROL ?>">Logout</a>
         </div>
       </div>
     </div>

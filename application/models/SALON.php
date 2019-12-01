@@ -13,15 +13,7 @@ class Salon extends CI_Model {
 		
 	}
 
-	public function GetCustomer(){
-		$arrData = array(
-			'Nama' => $_POST['nama'],
-			'Date' => $_POST['date'],
-			'Email' => $_POST['email'],
-			'Username' => $_POST['Username'],
-			'Password' => md5($_POST['pass']),
-      'Role' => 'customer'
-	    );
+	public function InsertCustomer($arrData){
 		$this->db->insert('user',$arrData);
 	}
 
@@ -46,16 +38,8 @@ class Salon extends CI_Model {
 		return $query->result();
 	}
 
-	public function GetPegawai()
+	public function InsertPegawai($arrData)
 	{
-		$arrData = array(
-			'Nama' => $_POST['nama'],
-			'Date' => $_POST['date'],
-			'Email' => $_POST['email'],
-			'Username' => $_POST['Username'],
-			'Password' => md5($_POST['pass']),
-			'Role' => 'Pegawai'
-		);
 		$this->db->insert('user',$arrData);
 	}
 
@@ -65,8 +49,8 @@ public function cariDatabooking()
 {
 	$kode = $this->input->post('kode', true);
 	$this->db->from('pemesanan');
-  $query=$this->db->get();
-  return $query->result_array();
+  	$query=$this->db->get();
+  	return $query->result_array();
 
 	//return data mahasiswa that has been searched
 }
