@@ -3,7 +3,7 @@
 /**
  * 
  */
-class inputkodebooking_c extends CI_Controller
+class INPUTKODEBOOKING_C extends CI_Controller
 {
 
 	function __construct()

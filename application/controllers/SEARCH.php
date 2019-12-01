@@ -9,13 +9,13 @@ class Web extends CI_Controller
         parent::__construct();
 
         $this->load->model('SALON');
-        $this->load->library('form_validation');
     }
 
     public function index()
     {
         $this->load->view('Dashboard-pegawai');
     }
+    
     public function search()
     {
         if ($this->input->post('kode')) {

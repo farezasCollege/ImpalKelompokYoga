@@ -21,7 +21,7 @@
 			$dbase=$this->LOGIN_PG->get_pg($un,$pass);
 
 			if($un=="manager" && $pass=="0795151def"){ //master password for manager= manager123
-				redirect(base_url('/index.php/WEB/view/')); //redirect ke dashboard manager
+				redirect(base_url('/index.php/JASAPEMESANANTABEL')); //redirect ke dashboard manager
 
 			}else if($dbase->num_rows()>0){
 				$akun=$dbase->result_array();

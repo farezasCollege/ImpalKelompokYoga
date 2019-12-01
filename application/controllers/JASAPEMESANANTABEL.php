@@ -14,7 +14,6 @@ class jasaPemesananTabel extends CI_Controller
 
 	public function index()
 	{
-		$data['judul'] = 'DaftarPemesanan';
 		$data['pemesanan'] = $this->JASAPEMESANAN_MODEL->getPemesanan()->result();
 		// print_r($data['pemesanan']);
 		$this->load->view('Tabel_booking', $data);
