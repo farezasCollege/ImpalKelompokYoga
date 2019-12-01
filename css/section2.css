@@ -1,0 +1,33 @@
+#service{
+	background-color: rgba(192,192,192,0.5);
+}
+
+#service h1{
+	text-align: center;
+	margin-top: 8%;
+}
+
+.col-4 ul li{
+	padding-top: 5% ;
+	padding-bottom: 5%; 
+	list-style-type: none;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 3px solid #47C1BF;
+}
+
+.col-4 ul li:hover{
+	background-color: rgba(128,128,128,0.3);
+}
+
+.container .container{
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-jasa{
+	margin-top: 3%;
+}
+
+

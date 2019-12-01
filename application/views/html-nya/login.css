@@ -1,0 +1,92 @@
+*{
+	/*box-sizing: border-box;*/
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container-login{
+	/*background-color: #a0fff7 rgba(160, 255, 247,0.8);*/
+	background-color: #fff;
+	padding: 16px;
+	width: 100%;
+	border-radius: 14px;
+	border: 5px solid #47c1bf;
+	box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);
+	z-index: 100;
+}
+
+.container-login h3{
+	margin-top: 5%;
+	text-align: center;
+	font-size: 32px;
+	color: #00848e;
+}
+
+.form-group{
+	padding: 2%;
+}
+.form-group input{
+	border: 2px solid #b5e8e8;
+	border-radius: 20px;
+	background: #f7ffff;
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin-top: 2%;
+}
+
+input[type=text], input[type=password]{
+	font-size: 16px;
+	padding: 5%;
+}
+
+input[type=text]:focus, input[type=password]:focus{
+	outline: none;
+	border: 2px solid #00848e;
+	border-radius: 20px;
+}
+
+.form-group label{
+	visibility: hidden;
+}
+
+.form-group button{
+	cursor: pointer;
+	border: none;
+	border-radius: 20px;
+	background-color:  #003135;
+	width: 100%;
+	height: 35px;
+	margin-top: 13%;
+	color: white;
+	margin-bottom: 5%;
+}
+
+.form-group a{
+	margin: 93px;
+	color: white;
+}
+
+::-webkit-input-placeholder {
+ font-size: 18px;
+ color: #bdc3c7;
+ text-align: center;
+ font-weight: bold;
+}
+:-moz-placeholder { /* older Firefox*/
+ font-size:18px;
+ color: #bdc3c7;
+ text-align: center;
+ font-weight: bold;
+}
+::-moz-placeholder { /* Firefox 19+ */ 
+ font-size: 18px;
+ color: #bdc3c7; 
+ text-align: center;
+ font-weight: bold;
+} 
+:-ms-input-placeholder { 
+ font-size: 18px;
+ color: #bdc3c7;
+ text-align: center;
+ font-weight: bold;
+}

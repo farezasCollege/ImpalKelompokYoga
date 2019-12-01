@@ -1,0 +1,29 @@
+.container {
+	
+	margin-top: 8%;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+	padding: 50px;
+	border-radius: 25px;
+	background-color: #B7ECEC;
+	color: #003130;
+}
+
+hr {
+	background-color: #00848E;
+}
+
+.form-control {
+	background-color: #E0F5F5;
+	border-color: #47C1BF;
+	border: 10px;
+}
+
+body {
+	background-color: #47C1BF;
+}
+
+.btn {
+	background-color: #00848E;
+	border-style: none;
+}
+

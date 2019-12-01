@@ -1,0 +1,9 @@
+#about{
+	background-color: #d3d3d3 !important;
+	z-index: 3;
+}
+
+#about h1{
+	text-align: center;
+	margin-top: 8%;
+}
