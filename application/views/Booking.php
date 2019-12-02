@@ -90,7 +90,17 @@
 
 	<script src="<?php echo base_url('user/lib/jquery/jquery.min.js'); ?>"></script>
 	<script src="<?php echo base_url('user/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/owlcarousel/owl.carousel.min.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/venobox/venobox.min.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/knob/jquery.knob.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/wow/wow.min.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/parallax/parallax.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/easing/easing.min.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/nivo-slider/js/jquery.nivo.slider.js'); ?>" type="text/javascript"></script>
+	<script src="<?php echo base_url('user/lib/appear/jquery.appear.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/isotope/isotope.pkgd.min.js'); ?>"></script>
 	<script src="<?php echo base_url('user/js/main.js'); ?>"></script>
+	<script src="<?php echo base_url('user/js/ajax-booking.js'); ?>"></script>
 </body>
 
 </html>

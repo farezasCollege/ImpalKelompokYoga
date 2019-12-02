@@ -12,13 +12,13 @@
   <title>SB Admin - Tables</title>
 
   <!-- Custom fonts for this template-->
-  <link href="<?php echo base_url()vendor/fontawesome-free/css/all.min.css; ?>" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url('vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="<?php echo base_url()vendor/datatables/dataTables.bootstrap4.css; ?>" rel="stylesheet">
+  <link href="<?php echo base_url('vendor/datatables/dataTables.bootstrap4.css'); ?>" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url()css/sb-admin.css; ?>" rel="stylesheet">
+  <link href="<?php echo base_url('css/sb-admin.css'); ?>" rel="stylesheet">
 
 </head>
 
@@ -32,11 +32,11 @@
       <i class="fas fa-bars"></i>
     </button>
 
-    
+
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
-      
+
     </ul>
 
   </nav>
@@ -46,7 +46,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item">
-        <a class="nav-link a-dashboard" href="#" >
+        <a class="nav-link a-dashboard" href="#">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
@@ -64,16 +64,16 @@
         <div class="row">
 
           <!-- Navbar Search -->
-            <form id="cek-kode" class="offset-md-4">
-              <div class=" input-group-text input-group-lg md-3 my-2 my-md-5">
-                <input type="search" name="cek-kobook" class="form-control" placeholder="Cari kode booking">
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="button" onclick="">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
+          <form id="cek-kode" class="offset-md-4">
+            <div class=" input-group-text input-group-lg md-3 my-2 my-md-5">
+              <input type="search" name="cek-kobook" class="form-control" placeholder="Cari kode booking">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="">
+                  <i class="fas fa-search"></i>
+                </button>
               </div>
-            </form>  
+            </div>
+          </form>
 
         </div>
 
@@ -82,28 +82,28 @@
           <div class="card-header">
             <i class="fas fa-table"></i>
             Data customer</div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Kode Booking</th>
-                      <th>Username</th>
-                      <th>Layanan</th>
-                      <th>Status Bayar</th>
-                      <th>Jam Pelayanan</th>
-                      <th>Tanggal Pelayanan</th>
-                    </tr>
-                  </thead>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Kode Booking</th>
+                    <th>Username</th>
+                    <th>Layanan</th>
+                    <th>Status Bayar</th>
+                    <th>Jam Pelayanan</th>
+                    <th>Tanggal Pelayanan</th>
+                  </tr>
+                </thead>
 
-                  <tbody>
-                    <tr id="isi-tabel"></tr>
-                  </tbody>
-                </table>
-              </div>
+                <tbody>
+                  <tr id="isi-tabel"></tr>
+                </tbody>
+              </table>
             </div>
+          </div>
         </div>
-        
+
         <!-- DataTables Example -->
 
       </div>
@@ -150,23 +150,23 @@
 
   <!-- Bootstrap core JavaScript-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="<?php echo base_url()pegawai-manager/vendor/jquery/jquery.min.js; ?>"></script>
-  <script src="<?php echo base_url()pegawai-manager/vendor/bootstrap/js/bootstrap.bundle.min.js; ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/vendor/jquery/jquery.min.js'); ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="<?php echo base_url()pegawai-manager/vendor/jquery-easing/jquery.easing.min.js; ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="<?php echo base_url()pegawai-manager/vendor/datatables/jquery.dataTables.js; ?>"></script>
-  <script src="<?php echo base_url()pegawai-manager/vendor/datatables/dataTables.bootstrap4.js; ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/vendor/datatables/jquery.dataTables.js'); ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/vendor/datatables/dataTables.bootstrap4.js'); ?>"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="<?php echo base_url()pegawai-manager/js/sb-admin.min.js; ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/js/sb-admin.min.js'); ?>"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="<?php echo base_url()pegawai-manager/js/demo/datatables-demo.js; ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/js/demo/datatables-demo.js'); ?>"></script>
 
-  <script src="<?php echo base_url()pegawai-manager/js/ajax-cekBooking.js; ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/js/ajax-cekBooking.js'); ?>"></script>
 
 </body>
 

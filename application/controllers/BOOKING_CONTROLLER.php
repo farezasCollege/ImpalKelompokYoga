@@ -17,27 +17,33 @@ class booking_controller extends CI_Controller
 	function getView()
 	{
 		$jasa = $_POST['service'];
+		$tanggal = $_POST['tgl'];
+		$jam = $_POST['jam'];
+		$username = $_SESSION['uname'];
+		// print_r($_POST);
+		// print_r($_SESSION['uname']);
+
+
 		$id = $this->db->query("select id_layanan from jenis_jasa where nama_jasa='$jasa'")->result_array();
 
 		$kode_booking = "psn-" . rand(0, 99);
 		$kobook = $this->BOOK->cekduplikat($kode_booking);
 
 		if ($kobook->num_rows() > 0) {
-			echo "silahkan ulangi input data booking lagi";
+			echo json_encode("0");
 		} else {
 			// echo "bisa";
-			$arrData = array(
+			$data = array(
 				'kode_booking' => $kode_booking,
-				'username' => $_SESSION['uname'],
+				'username' => $username,
 				'id_layanan' => $id[0]['id_layanan'],
-				'tanggal_pelayanan' => $_POST['tgl'],
-				'jam_pelayanan' => $_POST['jam'],
+				'tanggal_pelayanan' => $tanggal,
+				'jam_pelayanan' => $jam,
 				'status_bayar' => false
 			);
 
-			$kode = $kode_booking;
-			$this->BOOK->Getbooking($arr_data);
-			$this->kirim($arr_data);
+			$this->BOOK->Getbooking($data);
+			#$this->kirim($data);
 		}
 	}
 
@@ -75,10 +81,12 @@ class booking_controller extends CI_Controller
 
 		if ($this->email->send()) { //$this->session->set_flashdata("email_sent","Email sent successfully.");
 			// 			echo "sent";
-			$this->load->view('SUKSES_BOOKING');
+			#$this->load->view('SUKSES_BOOKING');
+			echo json_encode("1");
 		} else { //$this->session->set_flashdata("email_sent","Error in sending Email.");
-			echo "not sent <br>";
+			#echo "not sent <br>";
 			show_error($this->email->print_debugger());
+			echo json_encode("0");
 		}
 	}
 }

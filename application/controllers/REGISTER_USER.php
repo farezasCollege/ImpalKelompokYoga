@@ -28,6 +28,9 @@ class REGISTER_USER extends CI_Controller
             'Password' => md5($_POST['pass']),
             'Role' => 'customer'
         );
+        // print_r($data);
         $this->SALON->InsertCustomer($data);
+        // $msg = "1";
+        // echo json_encode($msg);
     }
 }

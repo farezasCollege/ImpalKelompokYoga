@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="" name="keywords">
 	<meta content="" name="description">
+
 
 	<!-- Favicons -->
 	<link href="<?php echo base_url('user/img/favicon.png'); ?>" rel="icon">
@@ -33,72 +35,69 @@
 	<!-- Responsive Stylesheet File -->
 	<link href="<?php echo base_url('user/css/responsive.css'); ?>" rel="stylesheet">
 </head>
+
 <body data-spy="scroll" data-target="#navbar-example">
 	<!-- <div id="preloader"></div> -->
 
 	<header>
-	<!-- header-area start -->
-	<div id="sticker" class="header-area">
-	  <div class="container">
-	    <div class="row">
-	      <div class="col-md-12 col-sm-12">
+		<!-- header-area start -->
+		<div id="sticker" class="header-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
 
-	        <!-- Navigation -->
-	        <nav class="navbar navbar-default">
-	          <!-- Brand and toggle get grouped for better mobile display -->
-	          <div class="navbar-header">
-	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-	            <!-- Brand -->
-	            <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-	              <h1>Salon<span>citra</span></h1>
-	              <!-- Uncomment below if you prefer to use an image logo -->
-	              <!-- <img src="img/logo.png" alt="" title=""> -->
+						<!-- Navigation -->
+						<nav class="navbar navbar-default">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<!-- Brand -->
+								<a class="navbar-brand page-scroll sticky-logo" href="<?php echo base_url('index.php/HOMEPAGE/pindahHalaman') ?>">
+									<h1>Salon<span>citra</span></h1>
+									<!-- Uncomment below if you prefer to use an image logo -->
+									<!-- <img src="img/logo.png" alt="" title=""> -->
 								</a>
-	          </div>
-	          <!-- Collect the nav links, forms, and other content for toggling -->
-	          <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-	            <ul class="nav navbar-nav navbar-right">
-					<li class="active">
-						<a class="page-scroll" href="#home">Home</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#about">About</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#services">Services</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#team">Team</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#contact">Contact</a>
-					</li>
-					<li>
-						<a href="#booking" >Book Now</a>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-account"><img style="width: 30px; height: 30px;" src="img/signup/account.jpg"></i> <?php if(isset($_SESSION)){echo $_SESSION['uname']} ?> <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#" ><?php if(isset($_SESSION)){echo $_SESSION['nama']} ?></a></li>
-                      <li><a href="<?php echo base_url()index.php/EDITPROFILE_C; ?>" >Edit profile</a></li>
-                      <li><a href="<?php echo base_url()index.php/HOMEPAGE/homepage_cust/logout; ?>" >Logout</a></li>
-                    </ul> 
-                  </li>
-	            </ul>
-	          </div>
-	          <!-- navbar-collapse -->
-	        </nav>
-	        <!-- END: Navigation -->
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<!-- header-area end -->
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+								<ul class="nav navbar-nav navbar-right">
+									<li class="active">
+										<a class="page-scroll" href="<?php echo base_url('index.php/HOMEPAGE/pindahHalaman') ?>">Home</a>
+									</li>
+									<li>
+										<a class="page-scroll" href="<?php echo base_url('index.php/HOMEPAGE/pindahHalaman') ?>#about">About</a>
+									</li>
+									<li>
+										<a class="page-scroll" href="<?php echo base_url('index.php/HOMEPAGE/pindahHalaman') ?>#services">Services</a>
+									</li>
+									<li>
+										<a class="page-scroll" href="<?php echo base_url('index.php/HOMEPAGE/pindahHalaman') ?>#team">Team</a>
+									</li>
+									<li>
+										<a class="page-scroll" href="<?php echo base_url('index.php/HOMEPAGE/pindahHalaman') ?>#contact">Contact</a>
+									</li>
+									<li>
+										<a href="<?php echo base_url('index.php/BOOKING_CONTROLLER') ?>">Book Now</a>
+									</li>
+									<li>
+										<a href="<?php echo base_url('index.php/EDITPROFILE_C'); ?>"><?php echo $_SESSION['uname']; ?></a>
+									</li>
+									<li><a href="<?php echo base_url('index.php/HOMEPAGE/logout'); ?>">Logout</a></li>
+								</ul>
+							</div>
+							<!-- navbar-collapse -->
+						</nav>
+						<!-- END: Navigation -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- header-area end -->
 	</header>
 	<!-- header end -->
 
@@ -115,4 +114,5 @@
 	<script src="<?php echo base_url('user/lib/isotope/isotope.pkgd.min.js'); ?>"></script>
 	<script src="<?php echo base_url('user/js/main.js'); ?>"></script>
 </body>
+
 </html>

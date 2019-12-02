@@ -1,60 +1,58 @@
-<?php 
+<?php
 
-	class LoginUser_controller extends CI_Controller
+class LoginUser_controller extends CI_Controller
+{
+
+	function __construct()
 	{
-		
-		function __construct(argument)
-		{
-			parent::__construct();
-			$this->load->model('HOMEPAGE_MODEL');
-		}
-
-		function index(){
-			$this->load->view('Login_user'); //ganti php duls
-			$this->load->view('Navbar');
-		}
-
-		function login_action(){
-			$username = $this->input->post('uname-input');
-			$password = mb_substr(md5($this->input->post('pass-input')),0,10);
-
-			//echo $password; 
-			//print_r($_POST);
-
-			$q = $this->HOMEPAGE_MODEL->cek_login($username,$password)->result_array();
-
-			$cek=$this->HOMEPAGE_MODEL->cek_login($username,$password)->num_rows();
-
-			if($cek > 0){ 
-				$data_session = array(
-					'uname' => $username,
-					'nama' => $q[0]['Nama'],
-					'email' => $q[0]['Email'],
-					'status' => "login",
-					'role' => $q[0]['Role']
-				);
-
-
-				$this->session->set_userdata($data_session);
-
-				if ($q[0]['Role']=='customer') {
-					echo json_encode("1");
-					redirect(base_url('/index.php/LoginUser_controller/homepage_cust/')); 
-				}else{
-					////tampilkan login gagal di view
-					echo json_encode("0");
-				}
-
-			}else{
-				echo json_encode("0");
-			}
-		}
-
-		function homepage_cust(){
-			$this->load->view('INDEX');
-			$this->load->view('Navbar-loggedin');
-		}
-
+		parent::__construct();
+		$this->load->model('HOMEPAGE_MODEL');
 	}
 
- ?>
+	function index()
+	{
+		$this->load->view('Login_user'); //ganti php duls
+		$this->load->view('Navbar');
+	}
+
+	function login_action()
+	{
+		$username = $this->input->post('uname-input');
+		$password = mb_substr(md5($this->input->post('pass-input')), 0, 10);
+
+		//echo $password; 
+		//print_r($_POST);
+
+		$q = $this->HOMEPAGE_MODEL->cek_login($username, $password)->result_array();
+
+		$cek = $this->HOMEPAGE_MODEL->cek_login($username, $password)->num_rows();
+
+		if ($cek > 0) {
+			$data_session = array(
+				'uname' => $username,
+				'nama' => $q[0]['Nama'],
+				'email' => $q[0]['Email'],
+				'status' => "login",
+				'role' => $q[0]['Role']
+			);
+
+
+			$this->session->set_userdata($data_session);
+
+			if ($q[0]['Role'] == "customer") {
+				echo json_encode("1");
+			} else {
+				////tampilkan login gagal di view
+				echo json_encode("0");
+			}
+		} else {
+			echo json_encode("0");
+		}
+	}
+
+	function homepage_cust()
+	{
+		$this->load->view('INDEX');
+		$this->load->view('Navbar-loggedin');
+	}
+}
