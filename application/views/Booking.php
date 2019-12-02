@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,8 +9,8 @@
 
 	<title>Booking</title>
 	<!-- Favicons -->
-	<link href="<?php echo base_url()user/img/favicon.png; ?>" rel="icon">
-	<link href="<?php echo base_url()user/img/apple-touch-icon.png; ?>" rel="apple-touch-icon">
+	<link href="<?php echo base_url('user/img/favicon.png'); ?>" rel="icon">
+	<link href="<?php echo base_url('user/img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
@@ -21,19 +22,20 @@
 	<link href="<?php echo base_url('/user/lib/nivo-slider/css/nivo-slider.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('/user/lib/owlcarousel/owl.carousel.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('/user/lib/owlcarousel/owl.transitions.css'); ?>" rel="stylesheet">
-	<link href="<?php echo base_url()user/lib/font-awesome/css/font-awesome.min.css; ?>" rel="stylesheet">
-	<link href="<?php echo base_url()user/lib/animate/animate.min.css; ?>" rel="stylesheet">
-	<link href="<?php echo base_url()user/lib/venobox/venobox.css; ?>" rel="stylesheet">
+	<link href="<?php echo base_url('user/lib/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet">
+	<link href="<?php echo base_url('user/lib/animate/animate.min.css'); ?>" rel="stylesheet">
+	<link href="<?php echo base_url('user/lib/venobox/venobox.css'); ?>" rel="stylesheet">
 
 	<!-- Nivo Slider Theme -->
-	<link href="<?php echo base_url()user/css/nivo-slider-theme.css; ?>" rel="stylesheet">
+	<link href="<?php echo base_url('user/css/nivo-slider-theme.css'); ?>" rel="stylesheet">
 
 	<!-- Main Stylesheet File -->
-	<link href="<?php echo base_url()user/css/style.css; ?>" rel="stylesheet">
+	<link href="<?php echo base_url('user/css/style.css'); ?>" rel="stylesheet">
 
 	<!-- Responsive Stylesheet File -->
-	<link href="<?php echo base_url()user/css/responsive.css; ?>" rel="stylesheet">
+	<link href="<?php echo base_url('user/css/responsive.css'); ?>" rel="stylesheet">
 </head>
+
 <body data-spy="scroll" data-target="#navbar-example">
 	<div class="container container-form">
 
@@ -42,7 +44,7 @@
 		<div class="row container2-form">
 			<div class="col-md-4 signup-img">
 				<!-- picture -->
-				<img src="<?php echo base_url()img/signup/haircut.jpg; ?>">
+				<img src="<?php echo base_url('user/img/signup/haircut.jpg'); ?>">
 			</div>
 			<div class="col-md-4 col-signup">
 				<div class="row judul">
@@ -76,18 +78,19 @@
 							<div class="row text-center signup-tombol">
 								<div class="col-md-12">
 									<button type="submit">Book now</button>
-								</div>								
+								</div>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 
-	<script src="<?php echo base_url()user/lib/jquery/jquery.min.js; ?>"></script>
-	<script src="<?php echo base_url()user/lib/bootstrap/js/bootstrap.min.js; ?>"></script>
-	<script src="<?php echo base_url()user/js/main.js; ?>"></script>
+	<script src="<?php echo base_url('user/lib/jquery/jquery.min.js'); ?>"></script>
+	<script src="<?php echo base_url('user/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
+	<script src="<?php echo base_url('user/js/main.js'); ?>"></script>
 </body>
+
 </html>
