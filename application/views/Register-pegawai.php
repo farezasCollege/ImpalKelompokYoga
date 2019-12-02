@@ -53,7 +53,7 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('index.php/REGISTERPEG'); ?>">
           <i class="fas fa-fw fa-users"></i>
           <span>Register Pegawai</span></a>
@@ -63,7 +63,7 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Data Pegawai</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('index.php/JASAPEMESANANTABEL'); ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Booking</span></a>
@@ -82,32 +82,33 @@
         <div class="card card-register mx-auto mt-5">
           <div class="card-header">Register an Account</div>
           <div class="card-body">
-            <form id="reg-pegawai-form">
+
+            <form id="reg-pegawai-form" method="post" role="form">
               <div class="form-group">
                 <div class="form-row">
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="text" name="nama" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
-                      <label for="firstName">Nama</label>
+                      <input type="text" id="Name" name="nama" class="form-control" placeholder="Name" required autofocus="autofocus">
+                      <label for="Name">Nama</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="text" name="Username" id="username" class="form-control" placeholder="Username" required="required">
-                      <label for="lastName">Username</label>
+                      <input type="text" name="Username" id="UserName" class="form-control" placeholder="Username" required>
+                      <label for="UserName">Username</label>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="date" name="date" id="inputTTL" class="form-control" required="required">
+                  <input type="date" name="tgl" id="inputTTL" class="form-control" required="required">
                   <label for="inputTTL">Tanggal Lahir</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
+                  <input type="email" name="Email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
                   <label for="inputEmail">Email address</label>
                 </div>
               </div>
@@ -128,7 +129,7 @@
                   </div>
                 </div>
               </div>
-              <a class="btn btn-primary btn-block" href="login.html">Register</a>
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
             </form>
           </div>
         </div>

@@ -3,19 +3,19 @@
 /**
  * 
  */
-class jasaPemesananTabel extends CI_Controller
+class JASAPEMESANANTABEL extends CI_Controller
 {
-	public function __construct()
+	function __construct()
 	{
 		parent::__construct();
 
 		$this->load->model('JASAPEMESANAN_MODEL');
 	}
 
-	public function index()
+	function index()
 	{
-		$data['pemesanan'] = $this->JASAPEMESANAN_MODEL->getPemesanan()->result();
+		$data['pemesanan'] = $this->JASAPEMESANAN_MODEL->getBooking()->result();
 		// print_r($data['pemesanan']);
-		$this->load->view('Tabel_booking', $data);
+		$this->load->view('Tabel-booking', $data);
 	}
 }

@@ -9,16 +9,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Tables</title>
+  <title>Dashboard - Pegawai</title>
 
   <!-- Custom fonts for this template-->
-  <link href="<?php echo base_url('vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url('pegawai-manager/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="<?php echo base_url('vendor/datatables/dataTables.bootstrap4.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('pegawai-manager/vendor/datatables/dataTables.bootstrap4.css'); ?>" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('css/sb-admin.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('pegawai-manager/css/sb-admin.css'); ?>" rel="stylesheet">
 
 </head>
 
@@ -26,7 +26,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">Dashboard pegawai</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -60,15 +60,16 @@
 
     <div id="content-wrapper">
       <h2 style="margin-left: 2%;">Cek kode booking pelanggan</h2>
+      <div id="notif"></div>
       <div class="container-fluid">
         <div class="row">
 
           <!-- Navbar Search -->
-          <form id="cek-kode" class="offset-md-4">
+          <form method="post" action="http://localhost/ImpalKelompokYoga/index.php/INPUTKODEBOOKING_C/cekkode" id="cek-kode" class="offset-md-4">
             <div class=" input-group-text input-group-lg md-3 my-2 my-md-5">
-              <input type="search" name="cek-kobook" class="form-control" placeholder="Cari kode booking">
+              <input type="text" name="cek-kobook" class="form-control" placeholder="Cari kode booking">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button" onclick="">
+                <button class="btn btn-primary" type="submit">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
@@ -93,6 +94,7 @@
                     <th>Status Bayar</th>
                     <th>Jam Pelayanan</th>
                     <th>Tanggal Pelayanan</th>
+                    <th>ACC</th>
                   </tr>
                 </thead>
 

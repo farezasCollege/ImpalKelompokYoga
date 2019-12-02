@@ -9,7 +9,6 @@ class REGISTERPEG extends CI_Controller
         parent::__construct();
 
         $this->load->model('SALON');
-        $this->load->library('form_validation');
     }
 
     public function index()
@@ -21,8 +20,8 @@ class REGISTERPEG extends CI_Controller
     {
         $data = array(
             'Nama' => $_POST['nama'],
-            'Date' => $_POST['date'],
-            'Email' => $_POST['email'],
+            'Date' => $_POST['tgl'],
+            'Email' => $_POST['Email'],
             'Username' => $_POST['Username'],
             'Password' => md5($_POST['pass']),
             'Role' => 'Pegawai'

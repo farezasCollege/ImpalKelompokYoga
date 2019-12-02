@@ -11,14 +11,14 @@
 
   <title>Data pegawai - Manager</title>
 
- <!-- Custom fonts for this template-->
- <link href="<?php echo base_url('pegawai-manager/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
+  <!-- Custom fonts for this template-->
+  <link href="<?php echo base_url('pegawai-manager/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
 
-<!-- Page level plugin CSS-->
-<link href="<?php echo base_url('pegawai-manager/vendor/datatables/dataTables.bootstrap4.css'); ?>" rel="stylesheet">
+  <!-- Page level plugin CSS-->
+  <link href="<?php echo base_url('pegawai-manager/vendor/datatables/dataTables.bootstrap4.css'); ?>" rel="stylesheet">
 
-<!-- Custom styles for this template-->
-<link href="<?php echo base_url('pegawai-manager/css/sb-admin.css'); ?>" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="<?php echo base_url('pegawai-manager/css/sb-admin.css'); ?>" rel="stylesheet">
 
 </head>
 
@@ -58,12 +58,12 @@
           <i class="fas fa-fw fa-users"></i>
           <span>Register Pegawai</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('index.php/DAFTARPEGAWAI'); ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Pegawai</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('index.php/JASAPEMESANANTABEL'); ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Booking</span></a>
@@ -95,9 +95,9 @@
                 <tbody>
                   <tr>
                     <?php foreach ($Pegawai as $Peg) : ?>
-                    <td class="text-center"><?= $Peg->Nama; ?></td>
-                    <td class="text-center"><?= $Peg->Date; ?></td>
-                    <td class="text-center"><?= $Peg->Email; ?></td>
+                      <td class="text-center"><?= $Peg->Nama; ?></td>
+                      <td class="text-center"><?= $Peg->Date; ?></td>
+                      <td class="text-center"><?= $Peg->Email; ?></td>
                     <?php endforeach ?>
                   </tr>
                 </tbody>
@@ -142,14 +142,14 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="<?php echo base_url()index.php/LOGIN_PEG_CONTROL ?>">Logout</a>
+          <a class="btn btn-primary" href="<?php echo base_url('index.php/LOGIN_PEG_CONTROL'); ?>">Logout</a>
         </div>
       </div>
     </div>
   </div>
 
- <!-- Bootstrap core JavaScript-->
- <script src="<?php echo base_url('pegawai-manager/vendor/jquery/jquery.min.js') ?>"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="<?php echo base_url('pegawai-manager/vendor/jquery/jquery.min.js') ?>"></script>
   <script src="<?php echo base_url('pegawai-manager/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
   <!-- Core plugin JavaScript-->

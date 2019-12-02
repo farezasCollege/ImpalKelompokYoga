@@ -13,7 +13,7 @@ class DAFTARPEGAWAI extends CI_Controller
 
     public function index() //lihat tabel pegawai dari manager
     {
-        $data['Pegawai'] = $this->SALON->GetAllPegawai();
+        $data['Pegawai'] = $this->SALON->GetAllPegawai()->result();
         $this->load->view('Tabel-pegawai', $data);
     }
 }

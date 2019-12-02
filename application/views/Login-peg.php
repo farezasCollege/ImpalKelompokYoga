@@ -12,10 +12,10 @@
   <title>SB Admin - Login</title>
 
   <!-- Custom fonts for this template-->
-  <link href="<?php echo base_url('vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url('pegawai-manager/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('css/sb-admin.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('pegawai-manager/css/sb-admin.css'); ?>" rel="stylesheet">
 
 </head>
 
@@ -24,8 +24,9 @@
   <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
+      <div id="notif"></div>
       <div class="card-body">
-        <form>
+        <form id="LoginPegawai-form" method="post" role="form">
           <div class="form-group">
             <div class="form-label-group">
               <input type="text" name="uname" id="inputEmail" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
@@ -38,7 +39,7 @@
               <label for="inputPassword">Password</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
         </form>
       </div>
     </div>
@@ -50,6 +51,7 @@
 
   <!-- Core plugin JavaScript-->
   <script src="<?php echo base_url('pegawai-manager/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+  <script src="<?php echo base_url('pegawai-manager/js/ajax-LoginPegawai.js'); ?>"></script>
 
 </body>
 
