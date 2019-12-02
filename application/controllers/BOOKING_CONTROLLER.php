@@ -81,11 +81,11 @@ class booking_controller extends CI_Controller
 		//$this->email->send();
 
 		if ($this->email->send()) { //$this->session->set_flashdata("email_sent","Email sent successfully.");
-			// echo json_encode("1");
+			echo json_encode("1");
 		} else { //$this->session->set_flashdata("email_sent","Error in sending Email.");
 			#echo "not sent <br>";
-			show_error($this->email->print_debugger());
-			// echo json_encode("0");
+			// show_error($this->email->print_debugger());
+			echo json_encode("0");
 		}
 	}
 }
