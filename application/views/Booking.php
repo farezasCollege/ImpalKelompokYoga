@@ -52,7 +52,7 @@
 				</div>
 				<div class="row">
 					<div class="form contact-form">
-						<form id="booking-form" method="post" role="form">
+						<form action="http://localhost/ImpalKelompokYoga/index.php/BOOKING_CONTROLLER/getView" id="booking-form" method="post" role="form">
 							<div class="form-group">
 								<label>Username: </label>
 								<input type="text" name="username" value="<?php echo $_SESSION['uname']; ?>" disabled>
@@ -100,7 +100,7 @@
 	<script src="<?php echo base_url('user/lib/appear/jquery.appear.js'); ?>"></script>
 	<script src="<?php echo base_url('user/lib/isotope/isotope.pkgd.min.js'); ?>"></script>
 	<script src="<?php echo base_url('user/js/main.js'); ?>"></script>
-	<script src="<?php echo base_url('user/js/ajax-booking.js'); ?>"></script>
+	<!-- <script src="<?php echo base_url('user/js/ajax-booking.js'); ?>"></script> -->
 </body>
 
 </html>

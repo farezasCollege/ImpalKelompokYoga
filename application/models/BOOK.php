@@ -1,11 +1,12 @@
 <?php
 class book extends CI_Model
 {
-	function Getbooking($arrData){
-		$this->db->insert('pemesanan',$arrData);
+	function InsertBooking($arrData)
+	{
+		$this->db->insert('pemesanan', $arrData);
 	}
 
-	function cekduplikat($kode) 
+	function cekduplikat($kode)
 	{
 		return $this->db->query("select kode_booking from pemesanan where kode_booking = '$kode'");
 	}
