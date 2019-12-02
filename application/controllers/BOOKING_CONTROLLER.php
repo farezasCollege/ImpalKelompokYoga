@@ -11,6 +11,7 @@ class booking_controller extends CI_Controller
 	function index()
 	{
 		$this->load->view('Booking');
+		$this->load->view('Navbar-loggedin');
 	}
 
 	function getView()

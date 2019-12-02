@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>eBusiness Bootstrap Template</title>
+
+  <title>Salon Citra - Homepage</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -290,9 +291,13 @@
     <div class="footer-area">
       <div class="container">
         <div class="row">
-          <div class="row" <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="section-headline text-center">
-              <h2>About Us</h2>
+
+          <div class="row"> 
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>About Us</h2>
+              </div>
+
             </div>
           </div>
         </div>

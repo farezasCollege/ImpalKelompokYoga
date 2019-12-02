@@ -6,6 +6,7 @@
 	<meta content="" name="keywords">
 	<meta content="" name="description">
 
+	<title>Login - User</title>
 	<!-- Favicons -->
 	<link href="<?php echo base_url('user/img/favicon.png'); ?>" rel="icon">
 	<link href="<?php echo base_url('user/img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
@@ -34,73 +35,33 @@
 	<link href="<?php echo base_url('user/css/responsive.css'); ?>" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navbar-example">
-	<!-- <div id="preloader"></div> -->
-
-	<header>
-	<!-- header-area start -->
-	<div id="sticker" class="header-area">
-	  <div class="container">
-	    <div class="row">
-	      <div class="col-md-12 col-sm-12">
-
-	        <!-- Navigation -->
-	        <nav class="navbar navbar-default">
-	          <!-- Brand and toggle get grouped for better mobile display -->
-	          <div class="navbar-header">
-	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-	            <!-- Brand -->
-	            <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-	              <h1>Salon<span>citra</span></h1>
-	              <!-- Uncomment below if you prefer to use an image logo -->
-	              <!-- <img src="img/logo.png" alt="" title=""> -->
-								</a>
-	          </div>
-	          <!-- Collect the nav links, forms, and other content for toggling -->
-	          <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-	            <ul class="nav navbar-nav navbar-right">
-					<li class="active">
-						<a class="page-scroll" href="#home">Home</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#about">About</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#services">Services</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#team">Team</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#contact">Contact</a>
-					</li>
-					<li>
-						<a href="#booking" >Book Now</a>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-account"><img style="width: 30px; height: 30px;" src="img/signup/account.jpg"></i> <?php if(isset($_SESSION)){echo $_SESSION['uname']} ?> <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#" ><?php if(isset($_SESSION)){echo $_SESSION['nama']} ?></a></li>
-                      <li><a href="<?php echo base_url()index.php/EDITPROFILE_C; ?>" >Edit profile</a></li>
-                      <li><a href="<?php echo base_url()index.php/HOMEPAGE/homepage_cust/logout; ?>" >Logout</a></li>
-                    </ul> 
-                  </li>
-	            </ul>
-	          </div>
-	          <!-- navbar-collapse -->
-	        </nav>
-	        <!-- END: Navigation -->
-	      </div>
-	    </div>
-	  </div>
+	<div class="container container-form">
+		<div class="row container3-form">
+			<div class="col-login">
+				<div class="row judul">
+					<h3>Login</h3>
+				</div>
+				<div class="row">
+					<div class="form contact-form">
+						<form id="login-form" method="post" role="form">
+							<div class="form-group">
+								<input type="text" name="uname-input" placeholder="Enter username" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="pass-input" placeholder="Enter your password" required>
+							</div>
+							<div class="row text-center login-tombol">
+								<div class="col-md-12">
+									<button type="submit">Masuk!!</button>
+								</div>								
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
-	<!-- header-area end -->
-	</header>
-	<!-- header end -->
 
 	<script src="<?php echo base_url('user/lib/jquery/jquery.min.js'); ?>"></script>
 	<script src="<?php echo base_url('user/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
@@ -114,5 +75,6 @@
 	<script src="<?php echo base_url('user/lib/appear/jquery.appear.js'); ?>"></script>
 	<script src="<?php echo base_url('user/lib/isotope/isotope.pkgd.min.js'); ?>"></script>
 	<script src="<?php echo base_url('user/js/main.js'); ?>"></script>
+	<script src="<?php echo base_url('user/js/ajax-login.js'); ?>"></script>
 </body>
 </html>

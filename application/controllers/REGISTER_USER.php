@@ -15,6 +15,7 @@ class REGISTER_USER extends CI_Controller
     public function index()
     {
         $this->load->view('Signup');
+        $this->load->view('Navbar');
     }
 
     public function Register()

@@ -12,6 +12,7 @@
 
 		public function index(){
 			$this->load->view('Edit-profile');
+			$this->load->view('Navbar-loggedin');
 		}		
 
 		public function ubah()
