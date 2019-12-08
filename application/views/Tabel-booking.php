@@ -76,12 +76,13 @@
         <h2 class="ml-2 ml-md-2 mt-md-2">
           Data Booking
         </h2>
-
         <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Booking</div>
+            Data Booking
+          </div>
+          <h4>Total pemasukan hari ini = Rp.<?php if($total[0]['tot']==null){echo "0";} else{echo $total[0]['tot'];} ?>,-</h4>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -93,17 +94,18 @@
                     <th class="text-center" scope="col">TIME</th>
                     <th class="text-center" scope="col">DATE</th>
                     <th class="text-center" scope="col">STATUS BAYAR</th>
+                    <th class="text-center" scope="col">EXPIRED</th>
                     <th class="text-center" scope="col">PRICE</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><?php foreach ($pemesanan as $Pem) : ?>
+                  <tr><?php foreach ($tabel as $Pem) : ?>
                       <td class="text-center"><?= $Pem->Nama; ?></td>
                       <td class="text-center"><?= $Pem->nama_jasa; ?></td>
                       <td class="text-center"><?= $Pem->jam_pelayanan; ?></td>
                       <td class="text-center"><?= $Pem->tanggal_pelayanan; ?></td>
-                      <td class="text-center"><?= $Pem->status_bayar; ?>
-                      </td>
+                      <td class="text-center"><?= $Pem->status_bayar; ?></td>
+                      <td class="text-center"><?= $Pem->expired; ?></td>
                       <td class="text-center"><?= $Pem->harga; ?></td>
                   </tr>
                 <?php endforeach ?>

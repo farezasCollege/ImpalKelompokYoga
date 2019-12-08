@@ -98,8 +98,8 @@
                       <td class="text-center"><?= $Peg->Nama; ?></td>
                       <td class="text-center"><?= $Peg->Date; ?></td>
                       <td class="text-center"><?= $Peg->Email; ?></td>
-                    <?php endforeach ?>
-                  </tr>
+                    </tr>
+                  <?php endforeach ?>
                 </tbody>
               </table>
             </div>

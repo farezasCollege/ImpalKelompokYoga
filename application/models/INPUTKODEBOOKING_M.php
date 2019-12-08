@@ -3,7 +3,7 @@
 	{
 		function cek_kode($a)
 		{
-			return $this->db->query("select status_bayar from pemesanan where kode_booking='$a'");
+			return $this->db->query("select status_bayar,expired from pemesanan where kode_booking='$a'");
 		}
 
 		function updateBayar($kode){
@@ -14,5 +14,9 @@
 
 		function dataBooking($a){
 			return $this->db->query("select * from pemesanan where kode_booking='$a'");
+		}
+
+		function deleteBookingExpired($a){
+			return $this->db->query("delete from pemesanan where kode_booking='$a'");
 		}
 	}

@@ -10,7 +10,7 @@ $(document).ready(function () {
                 if (response === "pegawai") {
                     location.href = "http://localhost/ImpalKelompokYoga/index.php/INPUTKODEBOOKING_C";
                 } else if (response === "manager") {
-                    location.href = "http://localhost/ImpalKelompokYoga/index.php/JASAPEMESANANTABEL";
+                    location.href = "http://localhost/ImpalKelompokYoga/index.php/REGISTERPEG";
                 } else {
                     $("#notif").html("<div class='alert alert-danger'>Maaf login gagal</div>");
                 }
