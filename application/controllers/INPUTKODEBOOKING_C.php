@@ -1,8 +1,5 @@
 <?php
 
-/**
- * 
- */
 class INPUTKODEBOOKING_C extends CI_Controller
 {
 
@@ -30,6 +27,7 @@ class INPUTKODEBOOKING_C extends CI_Controller
 		if ($query->num_rows() > 0 && $cekStatus[0]['status_bayar'] == 0 && $cekStatus[0]['expired'] == 0) {
 			// $this->acc($kodee);
 			// echo json_encode($arrData);
+			$tbl="<?php echo base_url('index.php/INPUTKODEBOOKING_C/acc/".$kodee."') ?>";
 			$arrData = array(
 				'kode_booking' => $data[0]['kode_booking'],
 				'Username' => $data[0]['Username'],
@@ -37,7 +35,7 @@ class INPUTKODEBOOKING_C extends CI_Controller
 				'status_bayar' => $data[0]['status_bayar'],
 				'jam_pelayanan' => $data[0]['jam_pelayanan'],
 				'tanggal_pelayanan' => $data[0]['tanggal_pelayanan'],
-				'tbl' => '<button type="button" onclick="http://localhost/ImpalKelompokYoga/index.php/INPUTKODEBOOKING_C/acc/' . $kodee . '" class="btn btn-success btn-xs ">Confirm</button>'
+				'tbl' => '<button type="button" onclick="'.$tbl.'" class="btn btn-success btn-xs ">Confirm</button>'
 			);
 
 			$msg = array(
@@ -45,6 +43,7 @@ class INPUTKODEBOOKING_C extends CI_Controller
 				'data' => $arrData
 			);
 			echo json_encode($msg);
+			$this->INPUTKODEBOOKING_M->updateBayar($kodee);
 		} else if ($query->num_rows() > 0 && $cekStatus[0]['status_bayar'] == 1) {
 			$arrData = array(
 				'kode_booking' => $data[0]['kode_booking'],
@@ -77,5 +76,6 @@ class INPUTKODEBOOKING_C extends CI_Controller
 	function acc($kode)
 	{
 		$this->INPUTKODEBOOKING_M->updateBayar($kode);
+
 	}
 }

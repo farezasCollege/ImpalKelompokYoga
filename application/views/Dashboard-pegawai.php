@@ -107,7 +107,6 @@
                     <th>Status Bayar</th>
                     <th>Jam Pelayanan</th>
                     <th>Tanggal Pelayanan</th>
-                    <th>ACC</th>
                   </tr>
                 </thead>
 
