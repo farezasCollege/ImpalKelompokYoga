@@ -20,6 +20,8 @@
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url('pegawai-manager/css/sb-admin.css'); ?>" rel="stylesheet">
 
+  <link href="<?php echo base_url('sweet-alert/dist/sweetalert2.min.css'); ?>" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -173,6 +175,8 @@
 
   <!-- Demo scripts for this page-->
   <script src="<?php echo base_url('pegawai-manager/js/demo/datatables-demo.js'); ?>"></script>
+  
+  <script src="<?php echo base_url('sweet-alert/dist/sweetalert2.min.js'); ?>" ></script>
 
 </body>
 

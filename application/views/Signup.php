@@ -34,6 +34,9 @@
 
 	<!-- Responsive Stylesheet File -->
 	<link href="<?php echo base_url('user/css/responsive.css'); ?>" rel="stylesheet">
+
+	<!-- sweet alert -->
+	<link href="<?php echo base_url('sweet-alert/dist/sweetalert2.min.css'); ?>" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -89,7 +92,14 @@
 
 	<script src="<?php echo base_url('user/lib/jquery/jquery.min.js'); ?>"></script>
 	<script src="<?php echo base_url('user/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
+
+	<!-- pass validation -->
 	<script src="<?php echo base_url('user/js/pass-validate.js'); ?>"></script>
+	
+	<!-- sweet alert -->
+	<script src="<?php echo base_url('sweet-alert/dist/sweetalert2.min.js'); ?>" ></script>
+
+	<!-- ajax -->
 	<script src="<?php echo base_url('user/js/ajax-signup.js'); ?>"></script>
 </body>
 

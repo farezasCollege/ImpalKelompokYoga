@@ -13,7 +13,13 @@ $(document).ready(function () {
 					isi = "<td>" + response.data.kode_booking + "</td><td>" + response.data.Username + "</td><td>" + response.data.id_layanan + "</td><td>" + response.data.status_bayar + "</td><td>" + response.data.jam_pelayanan + "</td><td>" + response.data.tanggal_pelayanan + "</td>";
 					$("#isi-tabel").html(isi);
 				} else if (response.status === "not_found") {
-					alert("Data booking tidak ditemukan!!");
+					// alert("Data booking tidak ditemukan!!");
+					Swal.fire({
+						icon: 'error',
+						title: 'Oops..',
+						text: 'Data booking tidak ditemukan!!',
+						showCloseButton: true
+					});
 					isi = "<td colspan='6' style='text-align: center;'>Data tidak ditemukan</td>";
 					$("#isi-tabel").html(isi);
 				} else if (response.status === "blm_bayar") {
@@ -21,7 +27,13 @@ $(document).ready(function () {
 					$("#isi-tabel").html(isi);
 					$("#notif").html('<div class="alert alert-success" role="alert">Pesanan berhasil di-acc!! </div>');
 				}else if(response.status==="telat_bayar"){
-					alert("Pemesanan ini dihapus!! Karena terlambat melakukan pembayaran (maks. 30 menit setelah pesan)");
+					// alert("Pemesanan ini dihapus!! Karena terlambat melakukan pembayaran (maks. 30 menit setelah pesan)");
+					Swal.fire({
+						icon: 'error',
+						title: 'Pemesanan ini dihapus!!',
+						text: 'terlambat melakukan pembayaran (maks. 30 menit setelah pesan)',
+						showCloseButton: true
+					});
 					isi = "<td colspan='6' style='text-align: center;'>Data tidak ditemukan</td>";
 					$("#isi-tabel").html(isi);
 				}

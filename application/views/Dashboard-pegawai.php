@@ -20,6 +20,9 @@
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url('pegawai-manager/css/sb-admin.css'); ?>" rel="stylesheet">
 
+  <!-- sweet alert -->
+  <link href="<?php echo base_url('sweet-alert/dist/sweetalert2.min.css'); ?>" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -178,6 +181,10 @@
   <!-- Demo scripts for this page-->
   <script src="<?php echo base_url('pegawai-manager/js/demo/datatables-demo.js'); ?>"></script>
 
+  <!-- sweet alert -->
+  <script src="<?php echo base_url('sweet-alert/dist/sweetalert2.min.js'); ?>" ></script>
+
+  <!-- ajax -->
   <script src="<?php echo base_url('pegawai-manager/js/ajax-cekBooking.js'); ?>"></script>
 
 </body>
