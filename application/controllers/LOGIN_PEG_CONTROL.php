@@ -11,7 +11,7 @@ class login_peg_control extends CI_Controller
 
 	function index()
 	{
-		if (isset($_SESSION)) {
+		if (isset($_SESSION['status'])) {
 			$this->session->sess_destroy();
 		}
 		$this->load->view('Login-peg');
@@ -25,6 +25,15 @@ class login_peg_control extends CI_Controller
 		$dbase = $this->LOGIN_PG->get_pg($un, $pass);
 
 		if ($un == "manager" && $pass == "0795151def") { //master password for manager= manager123
+			$peg_session = array(
+				'uname' => $un,
+				'nama' => $akun[0]['Nama'],
+				'status' => "login-as-manager",
+				'role' => $akun[0]['Role']
+			);
+
+			$this->session->set_userdata($peg_session);
+
 			echo json_encode("manager");
 		} else if ($dbase->num_rows() > 0) {
 			$akun = $dbase->result_array();
@@ -32,7 +41,7 @@ class login_peg_control extends CI_Controller
 			$peg_session = array(
 				'uname' => $un,
 				'nama' => $akun[0]['Nama'],
-				'status' => "login",
+				'status' => "login-as-pegawai",
 				'role' => $akun[0]['Role']
 			);
 

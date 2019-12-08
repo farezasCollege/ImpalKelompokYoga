@@ -9,7 +9,7 @@ $(document).ready(function () {
 			dataType: "json",
 			success: function (response) {
 				if (response.status === "sdh_bayar") {
-					$("#notif").html('<div class="alert alert-danger" role="alert">Pelanggan sudah membayar </div>');
+					$("#notif").html('<div id="note-alert" class="alert alert-danger" role="alert">Pelanggan sudah membayar </div>');
 					isi = "<td>" + response.data.kode_booking + "</td><td>" + response.data.Username + "</td><td>" + response.data.id_layanan + "</td><td>" + response.data.status_bayar + "</td><td>" + response.data.jam_pelayanan + "</td><td>" + response.data.tanggal_pelayanan + "</td>";
 					$("#isi-tabel").html(isi);
 				} else if (response.status === "not_found") {

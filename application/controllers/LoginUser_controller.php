@@ -11,8 +11,12 @@ class LoginUser_controller extends CI_Controller
 
 	function index()
 	{
+		if(isset($_SESSION['status'])){
+			$this->session->sess_destroy();
+		}
 		$this->load->view('Login_user'); //ganti php duls
 		$this->load->view('Navbar');
+		
 	}
 
 	function login_action()
@@ -32,7 +36,7 @@ class LoginUser_controller extends CI_Controller
 				'uname' => $username,
 				'nama' => $q[0]['Nama'],
 				'email' => $q[0]['Email'],
-				'status' => "login",
+				'status' => "login-as-user",
 				'role' => $q[0]['Role']
 			);
 
@@ -52,7 +56,11 @@ class LoginUser_controller extends CI_Controller
 
 	function homepage_cust()
 	{
-		$this->load->view('INDEX');
-		$this->load->view('Navbar-loggedin');
+		if(isset($_SESSION['status']) && $_SESSION['status']=="login-as-user"){
+			$this->load->view('INDEX');
+			$this->load->view('Navbar-loggedin');
+		}else{
+			$this->load->view('403-forbid');
+		}
 	}
 }

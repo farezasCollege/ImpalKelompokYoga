@@ -12,8 +12,16 @@ class EDITPROFILE_C extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('Edit-profile');
-		$this->load->view('Navbar-loggedin');
+		if(isset($_SESSION['status'])){
+			if($_SESSION['status']=="login-as-user"){
+				$this->load->view('Edit-profile');
+				$this->load->view('Navbar-loggedin');
+			}else{
+				$this->load->view('403-forbid');
+			}
+		}else{
+			$this->load->view('403-forbid');
+		}
 	}
 
 	public function ubah()

@@ -11,7 +11,11 @@ class INPUTKODEBOOKING_C extends CI_Controller
 
 	function index()
 	{
-		$this->load->view('Dashboard-pegawai');
+		if(isset($_SESSION['status'])==true && $_SESSION['status']=="login-as-pegawai"){
+            $this->load->view('Dashboard-pegawai');
+		}else{
+			$this->load->view('403-forbid-peg');
+		}
 	}
 
 	function cekkode()

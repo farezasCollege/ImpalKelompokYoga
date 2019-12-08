@@ -13,7 +13,11 @@ class REGISTERPEG extends CI_Controller
 
     public function index()
     {
-        $this->load->view('Register-pegawai');
+        if(isset($_SESSION['status']) && $_SESSION['status']=="login-as-manager"){
+            $this->load->view('Register-pegawai');
+		}else{
+			$this->load->view('403-forbid-peg');
+		}
     }
 
     public function Register()

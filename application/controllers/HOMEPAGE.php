@@ -21,7 +21,7 @@ class homepage extends CI_Controller
 	function pindahHalaman()
 	{
 		if (isset($_SESSION)) {
-			if ($_SESSION['status'] == "login") {
+			if ($_SESSION['status'] == "login-as-user") {
 				redirect(base_url('/index.php/LoginUser_controller/homepage_cust'));
 			}
 		} else {

@@ -10,8 +10,13 @@ class booking_controller extends CI_Controller
 
 	function index()
 	{
-		$this->load->view('Booking');
-		$this->load->view('Navbar-loggedin');
+		// isset($_SESSION);
+		if(isset($_SESSION['status'])==true && $_SESSION['status']=="login-as-user"){
+			$this->load->view('Booking');
+			$this->load->view('Navbar-loggedin');
+		}else{
+			$this->load->view('403-forbid');
+		}
 	}
 
 	function getView()
@@ -80,11 +85,9 @@ class booking_controller extends CI_Controller
 
 		//$this->email->send();
 
-		if ($this->email->send()) { //$this->session->set_flashdata("email_sent","Email sent successfully.");
+		if ($this->email->send()) { 
 			echo json_encode("1");
-		} else { //$this->session->set_flashdata("email_sent","Error in sending Email.");
-			#echo "not sent <br>";
-			// show_error($this->email->print_debugger());
+		} else { 
 			echo json_encode("0");
 		}
 	}
