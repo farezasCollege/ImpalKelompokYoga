@@ -27,9 +27,7 @@ class login_peg_control extends CI_Controller
 		if ($un == "manager" && $pass == "0795151def") { //master password for manager= manager123
 			$peg_session = array(
 				'uname' => $un,
-				'nama' => $akun[0]['Nama'],
-				'status' => "login-as-manager",
-				'role' => $akun[0]['Role']
+				'status' => "login-as-manager"
 			);
 
 			$this->session->set_userdata($peg_session);

@@ -26,7 +26,7 @@
       <div class="card-header">Login</div>
       <div id="notif"></div>
       <div class="card-body">
-        <form id="LoginPegawai-form" method="post" role="form">
+        <form id="LoginPegawai-form" method="post" action="http://localhost/ImpalKelompokYoga/index.php/Login_Peg_Control/login" role="form">
           <div class="form-group">
             <div class="form-label-group">
               <input type="text" name="uname" id="inputEmail" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
